@@ -1,0 +1,285 @@
+@charset "UTF-8";
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #e7e7e7;
+    padding: 20px;
+    min-width: 556px;
+}
+
+#atom-box {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 2px #ebebeb;
+}
+
+#atom-box li {
+    list-style: none;
+}
+
+.atom-title {
+    font-size: 18px;
+    color: #000000;
+    line-height: 20px;
+}
+
+.atom-title::after {
+    content: '';
+    display: block;
+    border: 1px solid #eaeaea;
+    position: relative;
+    top: 20px;
+}
+
+span.atom-color-block {
+    display: block;
+    float: left;
+    margin-right: 18px;
+    width: 4px;
+    height: 20px;
+    background-color: #0099ff;
+}
+
+.atom-list {
+    margin-top: 40px;
+}
+
+.atom-list>li {
+    position: relative;
+    /*cursor: pointer;*/
+    width: 24%;
+    height: 101px;
+    margin-right: 1.3%;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    float: left;
+}
+
+.atom-list li:nth-child(1)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 40px solid #40e399;
+    border-left: 40px solid transparent;
+}
+
+.atom-list li:nth-child(2)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 40px solid #f00;
+    border-left: 40px solid transparent;
+}
+
+.atom-list li:nth-child(3)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 40px solid #09f;
+    border-left: 40px solid transparent;
+}
+
+.atom-list li:nth-child(4)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 40px solid #d67fff;
+    border-left: 40px solid transparent;
+}
+
+.text-rotate {
+    position: absolute;
+    z-index: 100;
+    font-size: 12px;
+    top: 6px;
+    right: 2px;
+    color: #fff;
+    transform: rotate(45deg)
+}
+
+.atom-list>li:last-child {
+    margin-right: 0
+}
+.ie8-last {
+    margin-right: 0 !important;
+}
+.atom-list img {
+    margin-top: 20px;
+    margin-left: 20px;
+    vertical-align: baseline;
+}
+
+.atom-list-line {
+    margin-left: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 1px;
+    height: 60px;
+    background-color: #eaeaea
+}
+
+.atom-detail {
+    position: relative;
+    bottom: 5px;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.atom-detail h2 {
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.atom-detail p {
+    font-size: 16px;
+}
+
+.atom-tab {
+    margin-top: 44px;
+    position: relative;
+    z-index: 100;
+}
+.hrline{
+    content: '';
+    width: 100%;
+    position: relative;
+    color: #eaeaea;
+    border-top: 1px solid;
+    margin-top: -11px;
+    z-index: 1;
+    
+}
+
+.atom-tab>li {
+    float: left;
+    cursor: pointer;
+    width: 128px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #eaeaea;
+    border-right: none;
+   
+}
+.atom-tab>li:last-child{
+    border-right:1px solid #eaeaea;
+}
+.atom-tab-active {
+    background-color: #fff !important;
+    border-top: 2px solid #0099ff !important;
+    border-bottom: none !important;
+}
+
+.atom-tab-hide {
+    display: none;
+}
+
+.atom-select-box {
+    margin-top: 38px;
+    margin-left: 15px;
+}
+
+.atom-select-box span {
+    margin-right: 8px;
+}
+
+.btn {
+    width: 212px;
+    height: 32px;
+}
+
+.btn-icon {
+    width: 32px;
+    text-align: center;
+    background-color: #f1f1f1
+}
+
+.caret {
+    position: relative;
+    left: 2px;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+
+/* tab-panel内容修改 */
+
+#flow-diagram1,
+#flow-diagram2,
+#flow-diagram3,
+#flow-diagram4 {
+    width: 100%;
+    height: 480px;
+    margin-top: 32px;
+}
+
+
+/* tab-panel内容修改  end*/
+
+@media screen and (max-width: 1116px) {
+    .atom-list li {
+        width: 48%;
+    }
+    .atom-list li:nth-child(1) {
+        margin-right: 4%
+    }
+    .atom-list li:nth-child(2) {
+        margin-right: 0%
+    }
+    .atom-list li:nth-child(3) {
+        margin-top: 20px;
+        margin-right: 4%
+    }
+    .atom-list li:nth-child(4) {
+        margin-top: 20px;
+        margin-right: 0%
+    }
+}
+
+@media screen and (max-width: 611px) {
+    .atom-list li img {
+        width: 50px;
+        height: 50px;
+    }
+    .atom-list li img {
+        margin-top: 20px;
+        position: relative;
+        top: -4px;
+    }
+    .atom-list li h2 {
+        font-size: 22px;
+    }
+    .atom-list li p {
+        font-size: 14px;
+    }
+    .atom-tab {
+        width: 100%;
+    }
+    .atom-tab li {
+        width: 24%;
+    }
+}

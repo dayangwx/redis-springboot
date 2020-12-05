@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="customer.dao.QrySparkTabNameDao" >
+	<!-- 获取表名 -->
+	<select id="qryUsrTabName"  resultType="com.alibaba.fastjson.JSONObject">
+	SELECT d.base_table_name 'tableName' ,c.month_newest_date 'monNewDate' 
+	FROM dim_coc_index_base_table d 
+	LEFT JOIN ci_newest_label_date c 
+	ON  c.object_type = d.object_type  WHERE c.object_type =0 AND d.object_type = 0
+	</select>
+</mapper>

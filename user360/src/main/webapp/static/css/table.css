@@ -1,0 +1,369 @@
+@charset "utf-8";
+tbody tr:hover {
+	background-color: #FAFAFA;
+}
+
+/*  表格 class name a标签字体加粗   */
+td.name a {
+	font-weight: 400;
+	max-width: 190px;
+	cursor: pointer;
+	line-height: 39px;
+	display : block;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+
+td.name a:hover {
+	text-decoration: underline;
+}
+
+.right-alert {
+	z-index: 99999;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.right-alert-main th,
+.tabs_body td {
+	text-align: center;
+}
+
+.right-alert-main thead tr,
+.right-alert-main tfoot tr,
+.tabs_body thead tr,
+.tabs_body tfoot tr{
+	height: 35px;
+	/*background-color: #FAFAFA;
+	color: #9DA2B6;*/
+	background-color: #F3F3F4;
+	color: #333333;
+	font-size: 13px;
+}
+
+.right-alert-main tr,
+.tabs_body thead tr,
+.tabs_body tbody tr,
+.tabs_body tfoot tr {
+	border: 1px solid #E1E6EB;
+}
+
+
+.tabs_body thead th.operation {
+	text-align: center;
+	padding-right: 15px;
+}
+
+.tabs_body tbody td.operation {
+	text-align: right;
+	padding-right: 15px;
+}
+
+.right-alert-main tbody,
+.tabs_body tbody {
+	font-weight: 100;
+}
+
+.right-alert-main tbody tr,
+.tabs_body tbody tr {
+	height: 40px;
+	border-top: none;
+}
+
+.right-alert-main  tbody .operation button,
+.tabs_body tbody .name,
+.tabs_body tbody .tactics-num,
+.tabs_body tbody .operation button {
+	color: #32BCEA;
+	font-size: 13px;
+}
+
+.right-alert-main tbody,
+.tabs_body tbody {
+	/*color: #293038;*/
+	color: #666666;
+}
+
+.right-alert-main tbody tr:nth-child(odd),
+.tabs_body tbody tr:nth-child(odd) {
+	background-color: #FFFFFF;
+}
+
+.right-alert-main tbody tr:nth-child(even),
+.tabs_body tbody tr:nth-child(even) {
+	background-color: #FCFCFC;
+}
+
+.right-alert-main tbody tr:hover,
+.tabs_body tbody tr:hover {
+	background-color: #FAFAFA;
+}
+
+.right-alert-main tbody tr:nth-child(even),
+.tabs_body tbody tr:nth-child(even) {
+	background-color: #FCFCFC;
+}
+
+.tabs_body th.current-state i {
+	display: inline-block;
+	font-size: 15px;
+	margin-right: 8px;
+}
+
+.right-alert-main tbody td,
+.tabs_body tbody td {
+	font-weight: 300;
+}
+
+.right-alert-main tbody .operation button,
+.tabs_body tbody .operation button {
+	background: none;
+}
+
+.right-alert-main tbody .operation button:after, 
+.tabs_body tbody .operation button:after {
+	content: '';
+	width: 1px;
+	height: 12px;
+	/*background-color: #E1E6EB;*/
+	background-color: #32BCEA;
+	float: right;
+	margin: 3px 5px;
+}
+
+.right-alert-main table thead tr th,
+.tabs_body table thead tr th {
+    padding: 8px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #e1e6eb;
+    /*background-color: #FAFAFA;*/
+    background-color: #F3F3F4;
+}
+/*
+td.oprName{
+	display:block;
+	word-break:keep-all;
+	width: 70px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+*/
+
+tbody tr td {
+	padding: 0px 15px;
+}
+#apprOprBody td.oprName{
+	padding: 12px 15px;
+	/*padding: 0px 15px;*/
+	 font-weight: normal;
+	display:block;
+	word-break:keep-all;
+	width: 120px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.tabs_body table thead tr th:first-child,
+.tabs_body table tbody tr td:first-child {
+	text-align: left;
+}
+
+
+table tbody tr td.operation button.last-child:after {
+	display: none;
+}
+
+.tabs_body tbody tr .current-state i,
+.right-alert-main tbody tr .strategy-state i {
+	margin-right: 5px;
+}
+
+.tabs_body tbody tr .current-state i,
+.tabs_body tbody tr .current-state span,
+.right-alert-main tbody tr .strategy-state i,
+.right-alert-main tbody tr .strategy-state span {
+	float: left;
+}
+
+.tabs_body tbody tr .current-state div,
+.right-alert-main tbody tr .strategy-state div {
+	width: 69px;
+	height: 18px;
+	margin: 0 auto;
+}
+
+/*
+.tabs_body tbody tr.suspend .current-state i:before {
+	content: "\e619";
+	color: #F5A623;
+}
+
+.tabs_body tbody tr.running .current-state i:before,
+.tabs_body tbody tr.testing .current-state i:before {
+	content: "\e61a";
+	color: #24AC7E;
+}
+
+.tabs_body tbody tr.stop .current-state i:before {
+	content: "\e613";
+	color: #E68181;
+}
+
+.tabs_body tbody tr.stop .current-state i:before {
+	content: "\e613";
+	color: #E68181;
+}
+
+.tabs_body tbody tr.audit-submitted .current-state i:before {
+	content: "\e640";
+	color: #B377C5;
+}
+
+.tabs_body tbody tr.audit-uncommitted .current-state i:before {
+	content: "\e63f";
+	color: #62B5DF;
+}
+
+.tabs_body tbody tr.wait-release .current-state i:before {
+	content: "\e619";
+	color: #F5A623;
+}
+.tabs_body tbody tr.paused .current-state i:before {
+	content: "\e619";
+	color: #F5A623;
+}
+*/
+.tabs_body tbody tr .current-state i {
+	width:15px;
+	height:15px;
+	margin-top:4px;
+}
+/*
+.tabs_body tbody tr.suspend .current-state i {
+	background-image: url('/theme/img/icon_47.png');
+}
+*/
+
+.tabs_body tbody tr.running .current-state i {
+	background-image: url('/theme/img/published.png');
+}
+/*.tabs_body tbody tr.testing .current-state i {
+	background-image: url('/theme/img/icon_47.png');
+}*/
+
+.tabs_body tbody tr.stop .current-state i {
+	background-image: url('/theme/img/offline.png');
+}
+
+.tabs_body tbody tr.audit-submitted .current-state i {
+	background-image: url('/theme/img/toaudit.png');
+}
+
+.tabs_body tbody tr.audit-uncommitted .current-state i {
+	background-image: url('/theme/img/waitSubmit.png');
+}
+
+.tabs_body tbody tr.wait-release .current-state i {
+	background-image: url('/theme/img/suspend.png');
+}
+/*
+.tabs_body tbody tr.paused .current-state i {
+	background-image: url('/theme/img/icon_47.png');
+}
+*/
+
+.tabs_body tbody tr.audit-submitted .current-state span:before {
+	content: "审核中";
+}
+
+.tabs_body tbody tr.audit-uncommitted .current-state span:before {
+	content: "待提交";
+}
+
+.tabs_body tbody tr.wait-release .current-state span:before {
+	content: "暂停";
+}
+.tabs_body tbody tr.paused .current-state span:before {
+	content: "已暂停";
+}
+/*
+.tabs_body tbody tr.suspend .current-state span:before {
+	content: '停用';
+}
+*/
+.tabs_body tbody tr.running .current-state span:before {
+	content: '已发布';
+}
+/*
+.tabs_body tbody tr.testing .current-state span:before {
+	content: '测试中';
+}*/
+
+.tabs_body tbody tr.stop .current-state span:before {
+	content: '下线';
+}
+
+.right-alert-main tbody tr.suspend .strategy-state i:before {
+	content: "\e619";
+	color: #F5A623;
+}
+
+.right-alert-main tbody tr.running .strategy-state i:before {
+	content: "\e61a";
+	color: #24AC7E;
+}
+
+.right-alert-main tbody tr.stop .strategy-state i:before {
+	content: "\e613";
+	color: #E68181;
+}
+
+.right-alert-main tbody tr.suspend .strategy-state span:before {
+	content: '已暂停';
+}
+
+.right-alert-main tbody tr.running .strategy-state span:before {
+	content: '已启动';
+}
+
+#actList tbody tr.running .current-state span::before {
+    content: '已发布';
+}
+
+.right-alert-main tbody tr.stop .strategy-state span:before {
+	content: '已结束';
+}
+
+table tfoot tr td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+th[width='10'],
+td[width="10"] {
+	padding: 8px 8px;
+}
+
+.tabs_body tbody th.name a.dialog {
+	display: block;
+	height: 39px;
+	line-height: 40px;
+}
+
+.tabs_body tbody td.name a.dialog:hover {
+	text-decoration: underline;
+}
+
+.pull-right {
+	float: right!important
+}
+
+.pull-left {
+	float: left!important
+}

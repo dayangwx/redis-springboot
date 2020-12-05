@@ -1,0 +1,136 @@
+tbody tr.audited .current-state span:before{
+	content: "通过";
+	line-height: 25px;
+}
+tbody tr.audited .current-state i:before{
+	content: "\e649";
+    color: #32BCEA;
+	line-height:25px;
+}
+tbody tr.notaudited .current-state span:before{
+	content: "未通过";
+	line-height: 25px;
+}
+tbody tr.notaudited .current-state i:before{
+	content: "\e648";
+    color: #E68181;
+}
+tbody tr.toaudit .current-state span:before{
+	content: "待审核";
+	line-height: 25px;
+}
+tbody tr.toaudit .current-state i:before{
+	content: "\e637";
+    color: #62B5DF;
+}
+.top-part{
+	padding-top: 0;
+    float: left;
+}
+.right-alert-content-main{
+	display: block;
+}
+.right-alert-content-main tbody tr td{
+	text-align: center;
+	padding: 8px;
+}
+.audit-history{
+	margin-bottom: 30px;
+}
+.current-state div{
+	width: 58px !important; 
+    height: 17.5px;
+    margin: 0 auto;
+    text-align: left;
+}
+.form-audit{
+	width: 100%;
+	display: none;
+}
+
+
+.form-fileInput {
+	height: auto !important;
+}
+.form-audit .form-items,.form-audit .form-items .form-right,.form-audit .form-items .form-right textarea{
+	width: 100%;
+	max-width: none;
+}
+.form-btn-div .yes-btn{
+	background-color: #32BCEA;
+	color: #fff;
+	border: none;
+	display: none;
+}
+.form-btn-div .no-btn{
+	background-color: #E68181;
+	color: #fff;
+	margin-right: 15px;
+	border: none;
+	display: none;
+}
+td.name{
+	display: block;
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.col-full.more {
+	margin-bottom: 60px;
+	margin-top: 30px;
+	float: left;
+	position: relative;
+}
+
+.col-full.more .more-dashed {
+	width: 88%;
+	border-top: 1px dashed rgb(102, 102, 102);
+	margin: 0px auto;
+}
+
+.col-full.more span {
+	position: absolute;
+	top: -8px;
+	left: 50%;
+	margin-left: -50px;
+	background-color: rgb(255, 255, 255);
+	display: block;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.col-full.more span:before {
+	content: '更多基础信息';
+}
+
+.col-full.more span.fold:before {
+	content: '收起';
+}
+
+.col-full.more span:hover {
+	color: #32BCEA;
+}
+
+.col-full.more span i {
+	position: absolute;
+	top: 15px;
+	left: 43px;
+}
+
+.col-full.more span i:before {
+	content: '\e611';
+}
+
+.col-full.more span.fold i:before {
+	content: '\e610';
+}
+#viewCycleLimit p {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    float: none;
+    margin: 0 10px;
+}

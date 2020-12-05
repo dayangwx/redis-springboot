@@ -1,0 +1,219 @@
+@charset "utf-8";
+.Location-transparent {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 33px;
+	bottom: 0;
+	padding: 0 10px;
+	color: #666;
+	background-color: transparent;
+}
+
+/* tabs div外层 */
+.tabs-wapper {
+    display: block;
+    position: relative;
+}
+
+#crmTree span {
+	overflow: hidden;
+}
+
+.tabs_body {
+    width: 100%;
+    padding-left: 205px;
+}
+
+.tabs_box {
+    padding-top: 62px;
+}
+
+.tabs_sidebar {
+	position: absolute;
+	top: 15px;
+	bottom: 0px;
+	min-height: auto;
+	overflow: auto;
+}
+
+.top-part{
+    padding-top: 0;
+}
+
+.chooseDay-input {
+	border: none;
+}
+
+.chooseDay-input:before {
+	height: 35px;
+	line-height: 35px;	
+}
+
+#Hbox .tabs_sidebar {
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+}
+
+#Hbox .form-right {
+	width: 300px;
+}
+
+.right-alert-content-main-form {
+	width: 480px;
+	float: left;
+	margin-left: 190px;
+	display: none;
+}
+
+.right-alert_content {
+	padding-top: 130px;
+	margin-top: -130px;
+}
+
+.right-alert-content-main {
+	padding: 20px;
+	position: relative;
+}
+
+.toggler {
+	display: inline !important;
+	float: none !important;
+}
+
+#areaTreeSave {
+	width: 100% !important;
+	height: 30px;
+}
+
+#areaNameSave {
+	width: 293px !important;
+	height: 30px;
+	float: left !important;
+	border: none;
+}
+
+.tabs_body td a {
+	display : block;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+
+#innnerSpanSelect > ul {
+	max-height: 300px;
+	overflow: auto;
+}
+
+.scroll-table {
+	overflow: auto;
+	border: 1px solid #E1E6EB;
+	border-bottom: none;
+}
+
+.div-thead,
+.div-tbody,
+.scroll-table {
+	width: 100%;
+}
+
+.div-thead table,
+.div-tbody table {
+	width: 1260px;
+}
+
+.scroll-table .div-thead thead tr,
+.scroll-table .div-tbody tbody tr {
+	border: none;
+	border-bottom: 1px solid #E1E6EB;
+}
+
+.div-tbody {
+	border: none;
+}
+
+.div-tbody td,
+.div-tbody td a {
+	height: 40px;
+	line-height: 40px;
+}
+
+.div-tfoot tfoot tr {
+	border-top: none;
+}
+
+.scroll-table .nth1 {
+	width: 150px;
+}
+
+.scroll-table .nth3 {
+	width: 245px;
+}
+
+.scroll-table tr .nth3 + .nth3 {
+	width: 150px;
+}
+
+.scroll-table .nth4,
+.scroll-table .nth5 {
+	width: 100px;
+}
+.scroll-table .nth2 {
+	width: 130px;
+}
+
+.scroll-table .nth6,
+.scroll-table .nth7 {
+	width: 180px;
+}
+
+.scroll-table .nth8 {
+	width: 110px;
+}
+
+.scroll-table .nth9,
+.scroll-table .nth10 {
+	width: 120px;
+}
+
+.scroll-table td,
+.scroll-table th {
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
+
+.tabs_body table thead tr th {
+	border-bottom: none;
+	padding: 0 15px;
+	line-height: 35px;
+}
+
+.scroll-table td a {
+	width: 100%;
+}
+/* 删除第一列效果，后面需要展示详情页注释掉即可 */
+td.name a {
+	cursor: default;
+}
+
+@media screen and (max-width:1260px) {
+	.top-part .form-right {
+		width: 220px;
+	}
+	
+	.top-part .form-select-btn p {
+   		width: 185px;
+	}
+}
+
+@media screen and (max-height: 700px) {
+	.tabs-wapper > .tabs_sidebar {
+		height: 610px;
+	}
+}
+
+td.name a:hover {
+    text-decoration: none;
+}

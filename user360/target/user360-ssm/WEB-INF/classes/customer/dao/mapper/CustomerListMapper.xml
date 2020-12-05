@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="customer.dao.CustomerListDao" >
+	<!-- 用户清单查询及条件查询 -->
+	<select id="query" parameterType="java.util.Map"  resultType="com.alibaba.fastjson.JSONObject">
+		SELECT product_no AS 'no',pd_inst_id as 'pdInstId',avoid_bother_name AS 'typeName',avoid_bother_type AS 'type',channel_id AS 'channel',time_interval AS 'intervalTime', c.avoid_bother_desc AS 'desc',source,USER AS 'creator'
+		FROM ci_bother_avoid_customer c
+		LEFT JOIN dim_avoid_bother_customer d
+		ON d.avoid_bother_id=c.avoid_bother_type
+		WHERE 1=1 AND product_no !=""
+		<if test="number != null and number != ''">
+			AND product_no=#{number}
+		</if>
+		<if test="type != null and type !=''">
+			AND c.avoid_bother_type=#{type}
+		</if>
+		<if test="limit !=0 ">
+			limit #{start},#{limit}
+		</if>
+	</select>
+
+	<!-- 获取数据总数 -->
+	<select id="getcustCount" resultType="int">
+		SELECT  COUNT(product_no)
+		FROM ci_bother_avoid_customer c
+		LEFT JOIN dim_avoid_bother_customer d
+		ON  d.avoid_bother_id=c.avoid_bother_type   WHERE 1=1 AND product_no !=""
+		<if test="number != null and number != ''">
+			AND product_no=#{number}
+		</if>
+		<if test="type != null and type !=''">
+			AND c.avoid_bother_type=#{type}
+		</if>
+	</select>
+
+	<!-- 获取用户类型 -->
+	<select id="getCustTypes" resultType="com.alibaba.fastjson.JSONObject">
+		SELECT avoid_bother_id AS 'id',avoid_bother_name AS 'custType' FROM  dim_avoid_bother_customer
+	</select>
+
+	<!-- 删除用户 -->
+	<delete id="delCustomerByNo" parameterType="java.util.Map">
+		delete from ci_bother_avoid_customer where product_no = #{number} and avoid_bother_type = #{custType}
+	</delete>
+
+	<!-- 新增用户数据 -->
+	<insert id="addCustomer" parameterType="java.util.Map">
+		INSERT INTO  ci_bother_avoid_customer (product_no,avoid_bother_type,cust_id,pd_inst_id)
+		VALUES (#{number},#{custType},#{custId},#{pdInstId})
+	</insert>
+
+	<!--批量新增用户数据  -->
+	<insert id="batchAdd"  parameterType="java.util.Map">
+		INSERT INTO  ci_bother_avoid_customer (product_no,avoid_bother_type,cust_id,pd_inst_id)
+		VALUES
+		<foreach collection="users" item="user" index="index" separator="," >
+			(#{user.no},#{custType},#{user.custId},#{user.pdInstId})
+		</foreach>
+	</insert>
+
+	<!-- 获取用户类型接口服务 -->
+	<select id="getCustTypesInfo" parameterType="java.lang.String" resultType="com.alibaba.fastjson.JSONObject">
+		  SELECT a.avoid_bother_id 'typeId',a.avoid_bother_name 'typeName',b.system_id AS 'systemId',b.system_name AS'sysName'
+		  FROM  dim_avoid_bother_customer a
+		  LEFT JOIN( SELECT e.system_id,e.system_name,f.avoid_bother_id
+				  FROM dim_system e
+				  LEFT JOIN dim_system_user_type f
+				  ON e.system_id = f.system_id ) b
+		  ON a.avoid_bother_id = b.avoid_bother_id
+  		  WHERE b.system_id = #{systemId}
+	</select>
+</mapper>
